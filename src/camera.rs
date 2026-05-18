@@ -1,4 +1,4 @@
-use glam::Vec2;
+use crate::math::Vec2;
 
 pub struct Camera {
     pub zoom: f32,
@@ -31,5 +31,9 @@ impl Camera {
             x: (point.x - self.x_offset) / self.zoom,
             y: (point.y - self.y_offset) / self.zoom,
         }
+    }
+
+    pub fn zoom(&mut self, factor: f32) {
+        self.zoom *= factor;
     }
 }
