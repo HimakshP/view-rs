@@ -1,5 +1,6 @@
 use crate::math::Vec2;
 
+#[derive(Clone)]
 pub struct Camera {
     pub zoom: f32,
     pub x_offset: f32,
